@@ -1,0 +1,3 @@
+C:\2020_Second_Semester\Javascript Frameworks\Assignment1\TimAryavongExpressSite\TimAryavongExpressSite\obj\Debug\TimAryavongExpressSite.njsprojAssemblyReference.cache
+C:\2020_Second_Semester\Javascript Frameworks\Assignment1\TimAryavongExpressSite\TimAryavongExpressSite\obj\Debug\TimAryavongExpressSite.njsproj.CoreCompileInputs.cache
+C:\2020_Second_Semester\Javascript Frameworks\Assignment1\TimAryavongExpressSite\TimAryavongExpressSite\bin\Microsoft.NodejsTools.WebRole.dll

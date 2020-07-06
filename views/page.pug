@@ -1,0 +1,21 @@
+extends partials/header
+
+block content
+    div(class='pageContents lead')
+      if (page.title == 'Contact Tim')
+        p= page.content
+        p email: #{page.email}
+        p phone: #{page.phone}
+        form(method='POST' action='/contact')
+          h4(class='display-4') Contact Form
+            h5(class='display-5') Name*
+            input(type='text' name='nameFirst' placeholder='First Name' required)
+            input(type='text' name='nameLast' placeholder='Last Name' required)
+            h5(class='display-5') Email*
+            input(type='email' name='email' placeholder='Email' required)
+            h5(class='display-5') Phone*
+            input(type='tel' name='phone' placeholder='Phone' required)
+        button(type='submit' class='btn btn-dark') Submit
+      else
+        p= page.content
+    include partials/footer

@@ -1,0 +1,58 @@
+body {
+  display: block;
+  background-image: url("../images/skyocean.jpg");
+  background-position: center;
+  padding: 50px;
+}
+
+.container{
+  padding: 50px;
+}
+
+div.links {
+  width: 125px;
+  float: left;
+}
+
+.pageHeader, .homeHeader, .pageContents{
+  background-color: rgba(49, 119, 190, 0.7);
+  float: left;
+  margin-left: 1rem;
+  padding: 10px;
+  font-weight: 400 !important;
+}
+
+a {
+  color: black !important;
+  display: block;
+  font-weight: 400;
+}
+
+h1 {
+  background-color: rgba(49, 119, 190, 0.7);
+  margin-bottom: 3rem !important;
+  padding: .75rem 1.25rem !important;
+}
+
+h4 {
+  font-size: 3rem !important;
+}
+
+h5, p {
+  font-size: 1em !important;
+  margin: 5px 0px !important;
+}
+
+footer {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+form {
+  display: block !important;
+}
+
+button {
+  margin: 20px 0px !important;
+}

@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= page.title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+  body
+    h1(class='display-3')= page.title
+    div(class='links')
+      ul(class='list-group')
+        li(class='list-group-item list-group-item-primary')
+          a(href='/') Home
+        li(class='list-group-item list-group-item-dark')
+          a(href='/about') About
+        li(class='list-group-item list-group-item-primary')
+          a( href='/projects') Projects
+        li(class='list-group-item list-group-item-dark')
+          a(href='/services') Services
+        li(class='list-group-item list-group-item-primary')
+          a(href='/contact') Contact
+    block content
