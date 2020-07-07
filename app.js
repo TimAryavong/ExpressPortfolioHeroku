@@ -1,3 +1,11 @@
+/*
+  Author: Tim Aryavong
+  Date: June 6, 2020
+  Course: Javascript Frameworks
+  Decription: create portfolio website using Express and NodeJS.
+  Additional: only changes made from default are routes and mongoDB
+*/
+
 'use strict';
 var debug = require('debug');
 var express = require('express');
@@ -7,10 +15,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongoose = require('mongoose'); // requires our npm mongoose package
-const uri = "mongodb+srv://root:admin@cluster0-0wwxc.mongodb.net/PortfolioDB?retryWrites=true&w=majority";
+var mongoose = require('mongoose'); // requires npm mongoose package
+const uri = "mongodb+srv://root:admin@cluster0-0wwxc.mongodb.net/PortfolioDB?retryWrites=true&w=majority"; // wish to find a way to hide password
 
-try {
+try { // from class lecture, verbatim
   mongoose.connect(uri, { useNewUrlParser: true }); // uri means Uniform Resource Identifier
   var db = mongoose.connection;
   db.on('error', function (err) { // on an error
@@ -24,9 +32,8 @@ catch (err) {
   consol.log("Error: " + err);
 }
 
-var routes = require('./routes/index');
+//var routes = require('./routes/index');
 var routes = require('./routes');
-
 
 var app = express();
 
@@ -34,8 +41,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+// uncommented app.use(favicon... and placed a favicon.ico in /public to stop errors
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

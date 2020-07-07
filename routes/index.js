@@ -1,3 +1,11 @@
+/*
+  Author: Tim Aryavong
+  Date: June 6, 2020
+  Course: Javascript Frameworks
+  Decription: routes for 5 different versions of page.pug render
+  Additional: page.pug only renders two pages differently: contacts and projects. All other pages are just rendered with different data.
+*/
+
 'use strict';
 var express = require('express');
 var router = express.Router();
@@ -13,21 +21,29 @@ router.get('/', function (req, res) {
   });
 });
 
+// renders about.pug
 router.get('/about', function (req, res) {
   res.render('page', {
     page: {
       title: 'About Tim',
-      content: 'So you want to know more?(write a smol blurb)'
+      content: 'Tim is currently a student at Georgian College studying in the Computer Programmer Analayst program.'
     }
-  }); // renders about.pug
+  }); 
 });
+
+// renders projects.pug
 router.get('/projects', function (req, res) {
   res.render('page', {
     page: {
       title: 'Projects',
-      content: 'So you want to know about projects?(link to github? upload something?)'
+      content: "Here are some projects/assignments that I've done: ",
+      dotnet: 'https://' + 'github.com/TimAryavong/assign1/blob/idontunderstandgit/README.md',
+      javascript: 'https://' + 'github.com/TimAryavong/Course_Project-Phase_One',
+      javascript2: 'https://' + 'github.com/TimAryavong/2020JavascriptClass/blob/master/assignment1.html'
     }
-  }); // renders about.pug
+  }); 
+
+// renders services.pug
 });
 router.get('/services', function (req, res) {
   res.render('page', {
@@ -35,8 +51,10 @@ router.get('/services', function (req, res) {
       title: 'Services',
       content: 'So you want to know about services?(what can I do?)'
     }
-  }); // renders about.pug
+  });
 });
+
+// renders contact.pug
 router.get('/contact', function (req, res) {
   res.render('page', {
     page: {
@@ -45,9 +63,10 @@ router.get('/contact', function (req, res) {
       phone: '789-456-1234',
       content: 'For inquiries please email or text.'
     }
-  }); // renders about.pug
+  }); 
 });
 
+// posts contact info to mongoDB
 router.post('/contact', function (req, res) {
   const contact = new ContactModel({ name: { first: req.body.nameFirst, last: req.body.nameLast }, email: req.body.email, phone: req.body.phone });
   contact.save(function (err) {

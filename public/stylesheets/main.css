@@ -1,3 +1,10 @@
+/*
+  Author: Tim Aryavong
+  Date: June 6, 2020
+  Course: Javascript Frameworks
+  Decription: make custom modifications to the page aside from bootstrap
+*/
+
 body {
   display: block;
   background-image: url("../images/skyocean.jpg");

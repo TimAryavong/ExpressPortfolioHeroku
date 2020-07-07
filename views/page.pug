@@ -1,3 +1,10 @@
+//-
+  Author: Tim Aryavong
+  Date: June 6, 2020
+  Course: Javascript Frameworks
+  Decription: page that renders all views for my portfolio site
+  Additional: Not sure the best way to implement things, maybe angularJS would help here
+
 extends partials/header
 
 block content
@@ -16,6 +23,11 @@ block content
             h5(class='display-5') Phone*
             input(type='tel' name='phone' placeholder='Phone' required)
         button(type='submit' class='btn btn-dark') Submit
+      else if (page.title == 'Projects')
+        p= page.content
+          a(href= page.dotnet) Rock climbing supply store using .NET framework and C# (link to live site at bottom of README)
+          a(href= page.javascript) A to do list using Javascript (link to live site at bottom of README)
+          a(href= page.javascript2) Manipulating strings in Javascript 
       else
         p= page.content
     include partials/footer

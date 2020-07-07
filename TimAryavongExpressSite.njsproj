@@ -31,6 +31,9 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="models\Contact.js" />
+    <Content Include="public\favicon.ico">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\images\skyline.jpg" />
     <Content Include="public\images\darkness.jpg" />
     <Content Include="public\images\pictureframes.jpg" />

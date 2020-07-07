@@ -1,3 +1,11 @@
+/*
+  Author: Tim Aryavong
+  Date: June 6, 2020
+  Course: Javascript Frameworks
+  Decription: create database schema for contacts
+  Additional: Contacts page does not create email. Only stores data to a mongoDB. Will be expanded in the future. Possibly add some other database related feature to my site.
+*/
+
 // this will be a collection in the database
 const mongoose = require('mongoose');
 
